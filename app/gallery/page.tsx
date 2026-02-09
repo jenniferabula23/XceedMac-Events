@@ -8,7 +8,7 @@ import Link from "next/link"
 import { ArrowRight, Sparkles, X, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
 
-const categories = ["All", "Weddings", "Corporate", "Decor"]
+const categories = ["All", "Weddings", "Corporate"]
 
 const galleryItems = [
   {
@@ -36,11 +36,11 @@ const galleryItems = [
     category: "Corporate",
     image: "/images/gallery/corporate-2.jpg",
   },
-  {
-    title: "Wedding Cake Display",
-    category: "Decor",
-    image: "/images/IMG_5092.JPG",
-  },
+  // {
+  //   title: "Wedding Cake Display",
+  //   category: "Decor",
+  //   image: "/images/IMG_5092.JPG",
+  // },
   {
     title: "Luxury Wedding Setup",
     category: "Weddings",
@@ -51,11 +51,11 @@ const galleryItems = [
     category: "Corporate",
     image: "/images/corporate-event.jpg",
   },
-  {
-    title: "Venue Decoration",
-    category: "Decor",
-    image: "/images/IMG_6394.JPG",
-  },
+  // {
+  //   title: "Venue Decoration",
+  //   category: "Decor",
+  //   image: "/images/IMG_6394.JPG",
+  // },
 ]
 
 export default function GalleryPage() {

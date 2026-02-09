@@ -73,20 +73,20 @@ const services = [
       "Executive Meetings",
     ],
   },
-  {
-    title: "Venue & Decor",
-    description:
-      "Transform any space into a breathtaking setting with our expert venue styling and decoration services.",
-    image: "/images/IMG_8774.JPG",
-    features: [
-      "Venue Selection & Booking",
-      "Custom Decor Design",
-      "Floral Arrangements",
-      "Lighting Design",
-      "Table Settings",
-      "Theme Development",
-    ],
-  },
+  // {
+  //   title: "Venue & Decor",
+  //   description:
+  //     "Transform any space into a breathtaking setting with our expert venue styling and decoration services.",
+  //   image: "/images/IMG_8774.JPG",
+  //   features: [
+  //     "Venue Selection & Booking",
+  //     "Custom Decor Design",
+  //     "Floral Arrangements",
+  //     "Lighting Design",
+  //     "Table Settings",
+  //     "Theme Development",
+  //   ],
+  // },
 ]
 
 function AnimatedCounter({ end, duration = 2000 }: { end: number; duration?: number }) {

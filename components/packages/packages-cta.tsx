@@ -47,7 +47,7 @@ export function PackagesCTA() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="tel:+233000000000"
+            href="tel:+233558189100"
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-primary-foreground/10 transition-all duration-300 rounded-sm"
           >
             <Phone className="w-4 h-4" />
@@ -57,18 +57,18 @@ export function PackagesCTA() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-foreground/70">
           <a
-            href="tel:+233000000000"
+            href="tel:+233558189100"
             className="flex items-center gap-2 hover:text-secondary transition-colors"
           >
             <Phone className="w-5 h-5" />
-            +233 000 000 000
+            +233 558-189-100
           </a>
           <a
             href="mailto:info@xceedmac.com"
             className="flex items-center gap-2 hover:text-secondary transition-colors"
           >
             <Mail className="w-5 h-5" />
-            info@xceedmac.com
+           xceedmac@gmail.com
           </a>
         </div>
       </div>

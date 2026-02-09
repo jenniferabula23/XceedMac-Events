@@ -13,7 +13,6 @@ const quickLinks = [
 const services = [
   "Wedding Planning",
   "Corporate Events",
-  "Venue & Decor",
   "Event Coordination",
   "Social Gatherings",
 ]
