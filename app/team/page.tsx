@@ -15,10 +15,16 @@ const teamMembers = [
     bio: "As the founder and Executive Director, Michael brings years of experience in event planning and a passion for creating unforgettable experiences. His attention to detail and commitment to excellence has made XceedMac Events a trusted name in the industry.",
   },
   {
-    name: "Miss Freda Stephanie Essel",
+    name: "Miss Esther Fosu",
     role: "Executive Assistant",
-    image: "/images/team/WhatsApp Image 2022-05-13 at 6.59.39 PM.jpeg",
-    bio: "Freda ensures smooth operations across all our events with her exceptional organizational skills. Her dedication to client satisfaction and ability to handle multiple tasks simultaneously makes her an invaluable part of our team.",
+    image: "/images/team/LIL.jpg",
+    bio: "Esther ensures smooth operations across all our events with her exceptional organizational skills. Her dedication to client satisfaction and ability to handle multiple tasks simultaneously makes her an invaluable part of our team.",
+  },
+  {
+    name: "Miss Lilian Josephine Arthur",
+    role: "Client  Manager",
+    image: "/images/team/Esther.PNG",
+    bio: "Lilian is the friendly face of XceedMac, managing client relationships with warmth and professionalism. Her excellent communication skills and commitment to understanding client needs help us deliver personalized event experiences.",
   },
   {
     name: "Mr. Kusi Appiah",
@@ -31,6 +37,18 @@ const teamMembers = [
     role: "Brand Manager",
     image: "/images/team/WhatsApp Image 2022-05-13 at 11.42.11 PM.jpeg",
     bio: "David is responsible for shaping and maintaining the XceedMac brand identity. His creative vision and marketing expertise help us connect with clients and communicate our commitment to excellence.",
+  },
+   {
+    name: "Ann Brefo",
+    role: "Head of Ushers",
+    image: "/images/team/ann.JPG",
+    bio: "Ann leads our team of ushers, ensuring every guest is welcomed and guided with professionalism and warmth.",
+  },
+   {
+    name: "Gifty Adu Ankamah",
+    role: "Event Manager",
+    image: "/images/team/giftnew.jpg",
+    bio: "Gifty manages all aspects of our events with precision and care, ensuring every detail is executed perfectly.",
   },
 ]
 

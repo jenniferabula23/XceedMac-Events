@@ -28,6 +28,7 @@ const packages = [
     price: "Starts from $3,000.00",
     popular: false,
     features: [
+      "Flight and accommodation exclusive",
       "Virtual consultation sessions",
       "International vendor coordination",
       "Travel & accommodation planning",
@@ -40,7 +41,6 @@ const packages = [
     name: "XceedMac Full Package",
     description: "Our Complete Service Package covers everything you need in one solution: planning, coordination, protocol, security, and janitorial services—for a smooth, stress-free event experience.",
     price: "Starts from GHC 25,000",
-    note: "*Flight & accommodation exclusive*",
     popular: false,
     features: [
       "Complete event planning",
@@ -54,7 +54,7 @@ const packages = [
   {
     name: "Planning & Coordination",
     description: "Need professional support to plan your event? We act as your personal consultant, handling every detail to bring your vision to life and deliver the perfect blueprint for your event.",
-    price: "Starts from GHC 18,000",
+    price: "Starts from GHC 15,000",
     popular: false,
     features: [
       "Event planning consultation",

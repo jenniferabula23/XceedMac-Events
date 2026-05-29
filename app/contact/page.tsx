@@ -50,15 +50,40 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+
+    try {
+      const form = e.currentTarget
+      const response = await fetch("https://formspree.io/f/mjvzjwrk", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          eventType: "",
+          eventDate: "",
+          message: "",
+        })
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again.")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      alert("Oops! There was a problem submitting your form. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -95,12 +120,23 @@ export default function ContactPage() {
                     <h3 className="text-xl font-semibold text-foreground mb-2">
                       Thank You!
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mb-6">
                       Your message has been received. We&apos;ll be in touch soon to discuss your event.
                     </p>
+                    <button
+                      onClick={() => setIsSubmitted(false)}
+                      className="text-primary hover:text-primary/80 font-medium transition-colors"
+                    >
+                      Send another message
+                    </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    onSubmit={handleSubmit}
+                    action="https://formspree.io/f/mjvzjwrk"
+                    method="POST"
+                    className="space-y-6"
+                  >
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -224,7 +260,7 @@ export default function ContactPage() {
                     >
                       {isSubmitting ? (
                         <>
-                          <span className="animate-spin">&#9696;</span>
+                          <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
                           Sending...
                         </>
                       ) : (

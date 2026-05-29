@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',
   images: {
     unoptimized: true,
+  },
+  // Disable Turbopack to avoid the CSS processing error
+  experimental: {
+    turbo: false,
   },
 }
 

@@ -22,7 +22,7 @@ const featuredPackages = [
     name: "International",
     price: "$3,000+",
     description: "Planning events from anywhere in the world",
-    features: ["Virtual consultations", "Global coordination", "On-ground team"],
+    features: ["Virtual consultations", "Global coordination", "On-ground team","flight & accommodation"],
     popular: false,
   },
 ]

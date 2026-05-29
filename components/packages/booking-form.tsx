@@ -20,15 +20,42 @@ export function BookingForm() {
     additionalInfo: "",
   })
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const form = e.currentTarget
+      const response = await fetch("https://formspree.io/f/xlgwdyjp", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          contactMethod: "",
+          service: "",
+          eventType: "",
+          days: "",
+          guests: "",
+          additionalInfo: "",
+        })
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again.")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      alert("Oops! There was a problem submitting your form. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -74,7 +101,12 @@ export function BookingForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 md:p-12 animate-slide-up">
+    <form 
+      onSubmit={handleSubmit} 
+      action="https://formspree.io/f/xlgwdyjp"
+      method="POST"
+      className="bg-card border border-border rounded-lg p-8 md:p-12 animate-slide-up"
+    >
       <div className="grid md:grid-cols-2 gap-6">
         {/* Full Name */}
         <div className="space-y-2">
