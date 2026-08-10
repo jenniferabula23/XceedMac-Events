@@ -40,7 +40,7 @@ const packages = [
   {
     name: "XceedMac Full Package",
     description: "Our Complete Service Package covers everything you need in one solution: planning, coordination, protocol, security, and janitorial services—for a smooth, stress-free event experience.",
-    price: "Starts from GHC 25,000",
+    price: "Starts from GHC 20,000",
     popular: false,
     features: [
       "Complete event planning",
